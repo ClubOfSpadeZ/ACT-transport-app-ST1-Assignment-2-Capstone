@@ -1,4 +1,4 @@
-# Author: Rory Birnie, Akhil
+# Author: Rory Birnie u3261233, Akhil u3261101
 # Date created: 13 Apr 2023
 # Date last changed: 13 Apr 2020
 # This program will be the main interfaces for all other script used for making a transport App for ACT buses
