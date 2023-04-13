@@ -16,3 +16,7 @@
 # Predictive Analytics: predict the next next bus for a given route if the ideal one is missed
 # OPTIONAL Predictive Analytics: calculate the probability of a Route being either late Early or on-time using the NXTBUS real-time data API
 # Input: XML data of Bus stops, Routes and Position, Output: Bus travel Routes
+
+import busRequest
+
+busRequest.request()
