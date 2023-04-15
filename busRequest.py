@@ -3,6 +3,7 @@ import datetime
 import dicttoxml
 from typing_extensions import Literal
 
+
 def build(xmlDict):
     siriVersionTag = '<Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.0" xmlns="http://www.siri.org.uk/siri">'
     rawXML = dicttoxml.dicttoxml(xmlDict, attr_type=False, custom_root='Siri').decode()
@@ -32,7 +33,8 @@ def timeCONVERT(time_str: str, date_str: str = None):
         return time_iso
 
 
-def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direction: Literal['A', 'B'] = ..., stopType: Literal["all", "arrivals", "departures"] = ..., maxTrips: int = ..., debug: bool = False):
+def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direction: Literal['A', 'B'] = ...,
+              stopType: Literal["all", "arrivals", "departures"] = ..., maxTrips: int = ..., debug: bool = False):
     f"""
     stop monitoring Request will give you the passing Buses at a given stop from a starting time and interval\n
     argument formats\n
@@ -68,7 +70,8 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
     return requests.post(url=URL(ServiceType="sm", ServiceName="service"), data=build(xmlDict), headers=headers).text
 
 
-def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] = 'today', line: int = 0, direction: Literal['A', 'B'] = ..., debug: bool = False):
+def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] = 'today', line: int = 0,
+              direction: Literal['A', 'B'] = ..., debug: bool = False):
     f"""
     This will give you a timetable for a giving time and route for only the day the Request is sent\n
     argument formats\n
@@ -133,4 +136,3 @@ if __name__ == '__main__':
     API_Key = "EA1DEB"
     timeStamp = datetime.datetime.now().isoformat()
     headers = {'Content-Type': 'application/xml'}
-
