@@ -32,8 +32,15 @@ def timeCONVERT(time_str: str, date_str: str = None):
         return time_iso
 
 
-def smRequest(busStopID: int = 0000, previewTime: str = '30M', start: str = ..., direction: Literal['A', 'B'] = ..., stopType: Literal["all", "arrivals", "departures"] = ..., maxTrips: int = ..., debug: bool = False):
-
+def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direction: Literal['A', 'B'] = ..., stopType: Literal["all", "arrivals", "departures"] = ..., maxTrips: int = ..., debug: bool = False):
+    f"""
+    stop monitoring Request will give you the passing Buses at a given stop from a starting time and interval\n
+    argument formats\n
+    busStopID: XXXX\n
+    previewTime: M for minutes H for hours, 30M\n
+    maxTrips: int , Maximum number of trips to return\n
+    sample: smRequest(busStopID=2032, previewTime='', direction='A', debug=False)
+    """
     start = timeCONVERT(start)
 
     xmlDict = \
@@ -69,7 +76,7 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
     date: %d/%m/%Y or dd/mm/yyyy I.E 15/4/2023\n
     direction: 'A' or 'B'\n
     line: int or '81' or '4'\n
-    the debug argument is used for debuting: ture or false
+    sample: ptRequest(start="6:00am", end="6:15am", line=4, direction='B', debug=False)
     """
     if date == 'today':
         start = timeCONVERT(start)
@@ -97,6 +104,13 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
 
 
 def vmRequest(busID: int = 000, line: int = ..., direction: Literal['A', 'B'] = ..., debug: bool = False):
+    f"""
+    vehicle monitoring Request does not work\n
+    argument formats\n
+    BusID: int XXX\n
+    line: int or '81' or '4'\n
+    sample: vmRequest(busID=637, direction='A', debug=False)
+    """
     xmlDict = \
         {"ServiceRequest": {"RequestTimestamp": timeStamp, "RequestorRef": API_Key,
                             "VehicleMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeStamp,
@@ -120,6 +134,3 @@ if __name__ == '__main__':
     timeStamp = datetime.datetime.now().isoformat()
     headers = {'Content-Type': 'application/xml'}
 
-    print(smRequest(busStopID=2032, previewTime='', direction='A', debug=False))
-    # print(ptRequest(start="6:00am", end="6:15am", line=4, direction='B', debug=False))
-    # print(vmRequest(busID=637, direction='A', debug=False))
