@@ -12,8 +12,18 @@ def build(xmlDict):
 
 
 def URL(ServiceType, ServiceName):
-    url = f"http://siri.nxtbus.act.gov.au:11000/{API_Key}/{ServiceType}/{ServiceName}.xml"
+    url = f"http://siri.nxtbus.act.gov.au:11000/{getKEY()}/{ServiceType}/{ServiceName}.xml"
     return url
+
+
+def timeNOW():
+    timeStamp = datetime.datetime.now().isoformat()
+    return timeStamp
+
+
+def getKEY():
+    API_Key = "EA1DEB"
+    return API_Key
 
 
 def timeCONVERT(time_str: str, date_str: str = None):
@@ -46,8 +56,8 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
     start = timeCONVERT(start)
 
     xmlDict = \
-        {"ServiceRequest": {"RequestTimestamp": timeStamp, "RequestorRef": API_Key,
-                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeStamp,
+        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
+                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
                                                       "StartTime": start, "PreviewInterval": f"PT{previewTime}",
                                                       "MonitoringRef": busStopID, "DirectionRef": direction,
                                                       "StopVisitTypes": stopType, "MaximumStopVisits": maxTrips,
@@ -67,7 +77,7 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
         print(build(xmlDict))
         return
 
-    return requests.post(url=URL(ServiceType="sm", ServiceName="service"), data=build(xmlDict), headers=headers).text
+    return requests.post(url=URL(ServiceType="sm", ServiceName="service"), data=build(xmlDict)).text
 
 
 def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] = 'today', line: int = 0,
@@ -89,8 +99,8 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
         end = timeCONVERT(end, date)
 
     xmlDict = \
-        {"ServiceRequest": {"RequestTimestamp": timeStamp, "RequestorRef": API_Key,
-                            "ProductionTimetableRequest": {"-version": "2.0", "RequestTimestamp": timeStamp,
+        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
+                            "ProductionTimetableRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
                                                            "ValidityPeriod": {"StartTime": start, "EndTime": end},
                                                            "Lines": {"LineDirection": {"LineRef": f"ACT_{line}",
                                                                                        "DirectionRef": direction}}}}}
@@ -103,10 +113,10 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
         print(build(xmlDict))
         return
 
-    return requests.post(url=URL(ServiceType="pt", ServiceName="service"), data=build(xmlDict), headers=headers).text
+    return requests.post(url=URL(ServiceType="pt", ServiceName="service"), data=build(xmlDict)).text
 
 
-def vmRequest(busID: int = 000, line: int = ..., direction: Literal['A', 'B'] = ..., debug: bool = False):
+def vmRequest(route: int = ..., line: int = ..., direction: Literal['A', 'B'] = ..., debug: bool = False):
     f"""
     vehicle monitoring Request does not work\n
     argument formats\n
@@ -115,9 +125,9 @@ def vmRequest(busID: int = 000, line: int = ..., direction: Literal['A', 'B'] = 
     sample: vmRequest(busID=637, direction='A', debug=False)
     """
     xmlDict = \
-        {"ServiceRequest": {"RequestTimestamp": timeStamp, "RequestorRef": API_Key,
-                            "VehicleMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeStamp,
-                                                         "VehicleMonitoringRef": f"VM_ACT_{busID}",
+        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
+                            "VehicleMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
+                                                         "VehicleMonitoringRef": f"VM_ACT_{route:04d}",
                                                          "LineRef": line, "DirectionRef": direction}}}
     if line is ...:
         xmlDict["ServiceRequest"]["VehicleMonitoringRequest"].pop("LineRef")
@@ -129,10 +139,4 @@ def vmRequest(busID: int = 000, line: int = ..., direction: Literal['A', 'B'] = 
         print(build(xmlDict))
         return
 
-    return requests.post(url=URL(ServiceType="vm", ServiceName="service"), data=build(xmlDict), headers=headers).text
-
-
-if __name__ == '__main__':
-    API_Key = "EA1DEB"
-    timeStamp = datetime.datetime.now().isoformat()
-    headers = {'Content-Type': 'application/xml'}
+    return requests.post(url=URL(ServiceType="vm", ServiceName="service"), data=build(xmlDict)).text

@@ -18,5 +18,14 @@
 # Input: XML data of Bus stops, Routes and Position, Output: Bus travel Routes
 
 import busRequest
+import xmltodict
+import pandas
 
-busRequest.request()
+mydataset = xmltodict.parse(busRequest.ptRequest(line=81))
+
+myvar = pandas.DataFrame(mydataset)
+
+print(myvar)
+
+
+
