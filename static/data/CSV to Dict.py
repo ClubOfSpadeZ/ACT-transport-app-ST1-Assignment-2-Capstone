@@ -14,8 +14,8 @@ import json
 tree = ET.parse('Bus_Stops.xml')
 root = tree.getroot()
 
-# create an empty list to hold the data
-data = []
+# create an empty dictionary to hold the data
+data = {}
 
 # iterate over the XML nodes and extract the data
 for row in root.findall('./row/row'):
@@ -27,13 +27,16 @@ for row in root.findall('./row/row'):
     location = row.find('location')
     location_latitude = location.get('latitude')
     location_longitude = location.get('longitude')
-    data.append([
-        {'lat': float(stop_latitude) ,
-        'lng': float(stop_longitude)} ,
+    stop_data = [
+        {'lat': float(stop_latitude),
+         'lng': float(stop_longitude)},
         f"{stop_name}",
-        f"{suburb}",
-        f"{stop_id}",
-    ])
+        int(stop_id),
+    ]
+    if suburb in data:
+        data[suburb].append(stop_data)
+    else:
+        data[suburb] = [stop_data]
 
 # write data to JSON file
 with open('stopList.json', 'w') as json_file:
