@@ -1,26 +1,60 @@
-function readXml(xmlFile, stopNum) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'static/data/stopList.json', true);
+xhr.onreadystatechange = function() {
+  if (this.readyState === 4 && this.status === 200) {
+    BusStop = JSON.parse(this.responseText);
+    console.log(BusStop);
+  }
+};
+xhr.send();
 
-    var xmlDoc;
+// for (let x in BusStop) {
 
-    if(typeof window.DOMParser != "undefined") {
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("GET",xmlFile,false);
-        if (xmlhttp.overrideMimeType){
-            xmlhttp.overrideMimeType('text/xml');
-        }
-        xmlhttp.send();
-        xmlDoc=xmlhttp.responseXML;
-    }
-    else{
-        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-        xmlDoc.async="false";
-        xmlDoc.load(xmlFile);
-    }
-    var tagObj = xmlDoc.getElementsByTagName("row");
-    var stopID = tagObj[stopNum].getElementsByTagName("stop_id")[0].childNodes[0].nodeValue;
-    var stopLat = tagObj[stopNum].getElementsByTagName("stop_latitude")[0].childNodes[0].nodeValue;
-    var stopLon = tagObj[stopNum].getElementsByTagName("stop_longitude")[0].childNodes[0].nodeValue;
-    return [stopID, stopLat, stopLon]
-    }
+//     var markerCHISHOLM = [];
 
-document.getElementById("demo").innerHTML = readXml('/static/data/Bus_Stops.xml', 5)[0];
+//     BusStop[x].forEach(([position, title, Stop_ID], i) => {
+
+//         var icon = {
+//             url: 'static/assest/Bus_Pictogram.png',
+//             scaledSize: new google.maps.Size(20, 20) // Change the size of icon here
+//         };
+
+//         // Create a marker with a custom icon
+//         var markerCHISHOLM = new google.maps.Marker({
+//           position,
+//           map: map,
+//           icon: icon,
+//           optimized: true,
+//         });
+
+//         // Create a new info window for each marker
+//         var BusInfoWindow = new google.maps.InfoWindow({
+//             content: '<h3>' + title + '</h3>' +
+//                      '<p>' + Stop_ID + '</p>' +
+//                      '<p>Routes</p>'
+//         });
+
+//         markers.push(markerCHISHOLM);
+
+//         // Open the infoWindow when the marker is clicked
+//         markerCHISHOLM.addListener("click", function() {
+//             BusInfoWindow.open(map, markerCHISHOLM);
+//         });
+
+//         // Close the infoWindow when the map is clicked outside of it
+//         markerCHISHOLM.addListener('mouseout', function() {
+//             BusInfoWindow.close();
+//         });
+
+//         markerCHISHOLM.setVisible(false);
+//     });
+
+// }
+
+
+for (let x in BusStop) {
+  var value = BusStop[x];
+  console.log(BusStop);
+}
+
+console.log(BusStop);
