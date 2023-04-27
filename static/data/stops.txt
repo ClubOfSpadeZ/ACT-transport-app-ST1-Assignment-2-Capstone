@@ -1,0 +1,20 @@
+<response>
+<row>
+    <row _id="row-gdrm-5x5m.mcux" _uuid="00000000-0000-0000-97D0-0B40D26A0FD3" _position="0" _address="https://www.data.act.gov.au/resource/_7vpw-vmgx/row-gdrm-5x5m.mcux">
+        <stop_id>1500</stop_id>
+        <stop_latitude>-35.418312</stop_latitude>
+        <stop_longitude>149.11557</stop_longitude>
+        <stop_name>BEATTIE CR AFTER GOLDSTEIN CR</stop_name>
+        <suburb>CHISHOLM</suburb>
+        <location latitude="-35.418312" longitude="149.11557"/>
+    </row>
+    <row _id="row-5224-gi9d-74f6" _uuid="00000000-0000-0000-8317-39A06EDB1450" _position="0" _address="https://www.data.act.gov.au/resource/_7vpw-vmgx/row-5224-gi9d-74f6">
+        <stop_id>1521</stop_id>
+        <stop_latitude>-35.396854</stop_latitude>
+        <stop_longitude>149.104095</stop_longitude>
+        <stop_name>LONGMORE CR AFTER HARKER PL</stop_name>
+        <suburb>WANNIASSA</suburb>
+        <location latitude="-35.396854" longitude="149.104095"/>
+    </row>
+</row>
+</response>

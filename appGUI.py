@@ -4,17 +4,16 @@ import tkinter
 class myGUI:
     def __init__(self):
         self.main_window = tkinter.Tk()
-        self.main_window.title("Pound to Kilogram Calculator")
+        self.main_window.title("ACTION")
 
         # create frames
-        self.input_frame = tkinter.Frame()
-        self.button_frame = tkinter.Frame()
-        self.result_frame = tkinter.Frame()
+        self.route_frame = tkinter.Frame()
+        self.data_frame = tkinter.Frame()
+        self.graph_frame = tkinter.Frame()
 
         # create label and entry
-        self.Weight_label = tkinter.Label(self.input_frame, text="Mass in Pounds: ")
-        self.Weight_entry = tkinter.Entry(self.input_frame)
-
+        self.Weight_label = tkinter.Label(self.input_frame, text="Routes: ")
+        
         # create buttons
         calculate_button = tkinter.Button(self.button_frame, text="Calculate", command=self.calculate)
         quit_button = tkinter.Button(self.button_frame, text="Quit", command=self.main_window.destroy)
