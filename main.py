@@ -20,14 +20,41 @@ Q5: Draw chosen route
 # Input: XML data of Bus stops, Routes and Position, Output: Bus travel Routes
 
 import busRequest
-import xmltodict
+import xml.etree.ElementTree as et
 import pandas
+import googlemaps
 
-mydataset = xmltodict.parse(busRequest.ptRequest(line=81))
+key = 'AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE'
 
-myvar = pandas.DataFrame(mydataset)
-
-print(myvar)
-
+gmaps = googlemaps.Client(key=key)
 
 
+xml = busRequest.ptRequest(line=4, direction='B', start='12:30pm', end='12:40pm')
+# print(xml)
+
+# parse the XML data
+tree = et.ElementTree(et.fromstring(xml.decode()))
+root = tree.getroot()
+
+# print(et.tostring(root, encoding='unicode', method='xml'))
+# create an empty list to store the data
+data = []
+
+# loop through each DatedCall element and extract the required information
+for dated_call in root.findall('.//{http://www.siri.org.uk/siri}DatedCall'):
+    stop_point_ref = dated_call.find('{http://www.siri.org.uk/siri}StopPointRef').text
+    stop_point_name = dated_call.find('{http://www.siri.org.uk/siri}StopPointName').text
+    try:
+        aimed_arrival_time = dated_call.find('{http://www.siri.org.uk/siri}AimedArrivalTime').text
+    except AttributeError:
+        aimed_arrival_time = None
+    try:
+        aimed_departure_time = dated_call.find('{http://www.siri.org.uk/siri}AimedDepartureTime').text
+    except AttributeError:
+        aimed_arrival_time = None
+    data.append([stop_point_ref, stop_point_name, aimed_arrival_time, aimed_departure_time])
+
+# create a Pandas DataFrame with the data and column names
+df = pandas.DataFrame(data, columns=['StopPointRef', 'StopPointName', 'AimedArrivalTime', 'AimedDepartureTime'])
+
+print(df.to_string(index=True))

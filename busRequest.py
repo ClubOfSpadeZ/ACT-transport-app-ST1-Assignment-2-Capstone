@@ -114,7 +114,7 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
         print(build(xmlDict))
         return
 
-    return requests.post(url=URL(ServiceType="pt", ServiceName="service"), data=build(xmlDict)).text
+    return requests.post(url=URL(ServiceType="pt", ServiceName="service"), data=build(xmlDict)).content
 
 
 def vmRequest(route: int = ..., line: int = ..., direction: Literal['A', 'B'] = ..., debug: bool = False):
