@@ -53,15 +53,6 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
     maxTrips: int , Maximum number of trips to return\n
     sample: smRequest(busStopID=2032, previewTime='', direction='A', debug=False)
     """
-    start = timeCONVERT(start)
-
-    xmlDict = \
-        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
-                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
-                                                      "StartTime": start, "PreviewInterval": f"PT{previewTime}",
-                                                      "MonitoringRef": busStopID, "DirectionRef": direction,
-                                                      "StopVisitTypes": stopType, "MaximumStopVisits": maxTrips,
-                                                      "MaximumTextLength": "1024"}}}
 
     if start is ...:
         xmlDict["ServiceRequest"]["StopMonitoringRequest"].pop("StartTime")
@@ -71,6 +62,16 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
         xmlDict["ServiceRequest"]["StopMonitoringRequest"].pop("StopVisitTypes")
     if maxTrips is ...:
         xmlDict["ServiceRequest"]["StopMonitoringRequest"].pop("MaximumStopVisits")
+
+    start = timeCONVERT(start)
+
+    xmlDict = \
+        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
+                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
+                                                      "StartTime": start, "PreviewInterval": f"PT{previewTime}",
+                                                      "MonitoringRef": busStopID, "DirectionRef": direction,
+                                                      "StopVisitTypes": stopType, "MaximumStopVisits": maxTrips,
+                                                      "MaximumTextLength": "1024"}}}
 
     if debug is True:
         print(xmlDict)
