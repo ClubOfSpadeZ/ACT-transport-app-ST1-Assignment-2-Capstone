@@ -1,60 +1,39 @@
+var BusRoute;
+
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'static/data/stopList.json', true);
+xhr.open('GET', 'C:\Users\FireH\PycharmProjects\ACT-transport-app-ST1-Assignment-2-Capstone\static\data\Bus_Routes.xml', true);
 xhr.onreadystatechange = function() {
   if (this.readyState === 4 && this.status === 200) {
-    BusStop = JSON.parse(this.responseText);
-    console.log(BusStop);
+    BusRoute = JSON.parse(this.responseText);
+    console.log(BusRoute);
   }
 };
 xhr.send();
 
-// for (let x in BusStop) {
+// Assume xmlData is the XML string to be processed
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(BusRoute, "text/xml");
 
-//     var markerCHISHOLM = [];
+const rows = xmlDoc.getElementsByTagName("row");
+const nestedArray = [];
 
-//     BusStop[x].forEach(([position, title, Stop_ID], i) => {
+for (let i = 0; i < rows.length; i++) {
+  const row = rows[i];
+  const attributes = row.attributes;
+  const rowData = {};
 
-//         var icon = {
-//             url: 'static/assest/Bus_Pictogram.png',
-//             scaledSize: new google.maps.Size(20, 20) // Change the size of icon here
-//         };
+  for (let j = 0; j < attributes.length; j++) {
+    const attribute = attributes[j];
+    rowData[attribute.nodeName] = attribute.nodeValue;
+  }
 
-//         // Create a marker with a custom icon
-//         var markerCHISHOLM = new google.maps.Marker({
-//           position,
-//           map: map,
-//           icon: icon,
-//           optimized: true,
-//         });
+  const children = row.children;
+  for (let j = 0; j < children.length; j++) {
+    const child = children[j];
+    rowData[child.nodeName] = child.textContent;
+  }
 
-//         // Create a new info window for each marker
-//         var BusInfoWindow = new google.maps.InfoWindow({
-//             content: '<h3>' + title + '</h3>' +
-//                      '<p>' + Stop_ID + '</p>' +
-//                      '<p>Routes</p>'
-//         });
-
-//         markers.push(markerCHISHOLM);
-
-//         // Open the infoWindow when the marker is clicked
-//         markerCHISHOLM.addListener("click", function() {
-//             BusInfoWindow.open(map, markerCHISHOLM);
-//         });
-
-//         // Close the infoWindow when the map is clicked outside of it
-//         markerCHISHOLM.addListener('mouseout', function() {
-//             BusInfoWindow.close();
-//         });
-
-//         markerCHISHOLM.setVisible(false);
-//     });
-
-// }
-
-
-for (let x in BusStop) {
-  var value = BusStop[x];
-  console.log(BusStop);
+  nestedArray.push(rowData);
 }
 
-console.log(BusStop);
+console.log(nestedArray);

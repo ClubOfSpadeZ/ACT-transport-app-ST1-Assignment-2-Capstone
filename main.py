@@ -35,7 +35,7 @@ key = 'AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE'
 gmaps = googlemaps.Client(key=key)
 
 
-xml = busRequest.ptRequest(line=4, direction='B', start='12:30pm', end='12:40pm')
+xml = busRequest.ptRequest(line=4, direction='B', start='6:00am', end='11:00pm')
 # print(xml)
 
 # parse the XML data
@@ -64,3 +64,4 @@ for dated_call in root.findall('.//{http://www.siri.org.uk/siri}DatedCall'):
 df = pandas.DataFrame(data, columns=['StopPointRef', 'StopPointName', 'AimedArrivalTime', 'AimedDepartureTime'])
 
 print(df.to_string(index=True))
+

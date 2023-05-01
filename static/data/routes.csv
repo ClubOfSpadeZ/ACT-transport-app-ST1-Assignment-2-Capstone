@@ -1,0 +1,237 @@
+route_id,route_short_name,route_long_name,route_desc,route_type,route_color,route_text_color,route_url
+2-10593,2,"Fraser to Fyshwick via Belconnen & City",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+2-10605,2,"Fraser to Fyshwick via Belconnen & City",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+3-10593,3,"Spence to CBR Airport via City & Brindabella Park",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+3-10605,3,"Spence to CBR Airport via City & Brindabella Park",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+4-10593,4,"Belconnen to Tuggeranong via City & Woden",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+4-10605,4,"Belconnen to Tuggeranong via City & Woden",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+5-10593,5,"Lanyon to City ANU via Erindale & Woden",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+5-10605,5,"Lanyon to City ANU via Erindale & Woden",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+6-10593,6,"Woden to City ANU via Kingston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+6-10605,6,"Woden to City ANU via Kingston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+7-10593,7,"Duffy to City ANU via Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+7-10605,7,"Duffy to City ANU via Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+8-10593,8,"Gunghalin to Belconnen",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+8-10605,8,"Gunghalin to Belconnen",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+9-10593,9,"Belconnen to Watson via Bruce & Dickson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+9-10605,9,"Belconnen to Watson via Bruce & Dickson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+10-10593,10,"Denman Prospect to City ANU",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+10-10605,10,"Denman Prospect to City ANU",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+18-10593,18,"Gungahlin to Dickson via Franklin & Mitchell",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+18-10605,18,"Gungahlin to Dickson via Franklin & Mitchell",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+19-10593,19,"Bonner Loop via Forde & Amaroo",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+19-10605,19,"Bonner Loop via Forde & Amaroo",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+20-10593,20,"Bonner Loop via Amaroo & Forde",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+20-10605,20,"Bonner Loop via Amaroo & Forde",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+21-10593,21,"Throsby Loop via Palmerston & Harrison",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+21-10605,21,"Throsby Loop via Palmerston & Harrison",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+22-10593,22,"Throsby Loop via Harrison & Palmerston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+22-10605,22,"Throsby Loop via Harrison & Palmerston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+23-10593,23,"Gungahlin to Belconnen via Crace & Giralang",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+23-10605,23,"Gungahlin to Belconnen via Crace & Giralang",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+24-10593,24,"Gungahlin to Belconnen via Nicholls & McKellar",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+24-10605,24,"Gungahlin to Belconnen via Nicholls & McKellar",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+25-10593,25,"Taylor Loop via Amaroo & Moncrieff",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+25-10605,25,"Taylor Loop via Amaroo & Moncrieff",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+26-10593,26,"Taylor Loop via Moncrieff & Amaroo",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+26-10605,26,"Taylor Loop via Moncrieff & Amaroo",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+27-10593,27,"Casey to Gungahlin via Ngunnawal & Moncrieff",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+27-10605,27,"Casey to Gungahlin via Ngunnawal & Moncrieff",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+28-10593,28,"Casey to Gungahlin via Ngunnawal",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+28-10605,28,"Casey to Gungahlin via Ngunnawal",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+30-10593,30,"Belconnen to Dickson via Giralang & Kaleen North",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+30-10605,30,"Belconnen to Dickson via Giralang & Kaleen North",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+31-10593,31,"Belconnen to City via Kaleen South & Dickson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+31-10605,31,"Belconnen to City via Kaleen South & Dickson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+32-10593,32,"Belconnen to City via Jamison & Aranda",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+32-10605,32,"Belconnen to City via Jamison & Aranda",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+40-10593,40,"Fraser Loop via Kippax & Charnwood",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+40-10605,40,"Fraser Loop via Kippax & Charnwood",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+41-10593,41,"Fraser to Belconnen via Flynn & Melba",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+41-10605,41,"Fraser to Belconnen via Flynn & Melba",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+42-10593,42,"Fraser Loop via Charnwood & Kippax",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+42-10605,42,"Fraser Loop via Charnwood & Kippax",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+43-10593,43,"Spence to Belconnen via Evatt & McKellar",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+43-10605,43,"Spence to Belconnen via Evatt & McKellar",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+44-10593,44,"Kippax to Belconnen via West Macgregor & Higgins",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+44-10605,44,"Kippax to Belconnen via West Macgregor & Higgins",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+45-10593,45,"Kippax to Belconnen via Hawker & Weetangera",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+45-10605,45,"Kippax to Belconnen via Hawker & Weetangera",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+46-10593,46,"Kippax to Belconnen via Latham & Florey",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+46-10605,46,"Kippax to Belconnen via Latham & Florey",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+47-10593,47,"Whitlam Denman Loop",,3,0042AC,FFFFFF,
+47-10605,47,"Whitlam Denman Loop",,3,0042AC,FFFFFF,
+50-10593,50,"Watson to City via Dickson & Lyneham",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+50-10605,50,"Watson to City via Dickson & Lyneham",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+51-10593,51,"Dickson to City via North Lyneham & O'Connor",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+51-10605,51,"Dickson to City via North Lyneham & O'Connor",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+53-10593,53,"Dickson to National Museum via Hackett & Ainslie",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+53-10605,53,"Dickson to National Museum via Hackett & Ainslie",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+54-10593,54,"Majura Park Loop via Campbell Park",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+54-10605,54,"Majura Park Loop via Campbell Park",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+55-10593,55,"ADFA Loop via Campbell & Reid",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+55-10605,55,"ADFA Loop via Campbell & Reid",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+56-10593,56,"Fyshwick to City via Red Hill & Kingston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+56-10605,56,"Fyshwick to City via Red Hill & Kingston",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+57-10593,57,"Woden to City via Hughes & Yarralumla",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+57-10605,57,"Woden to City via Hughes & Yarralumla",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+58-10593,58,"Woden to City via Curtin & Deakin",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+58-10605,58,"Woden to City via Curtin & Deakin",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+59-10593,59,"Woden to City ANU via Barton & Russell",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+59-10605,59,"Woden to City ANU via Barton & Russell",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+60-10593,60,"Mawson Loop via O'Malley & Farrer",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+60-10605,60,"Mawson Loop via O'Malley & Farrer",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+61-10593,61,"Mawson Loop via Farrer & O'Malley",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+61-10605,61,"Mawson Loop via Farrer & O'Malley",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+62-10593,62,"Torrens Loop via Lyons & Pearce",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+62-10605,62,"Torrens Loop via Lyons & Pearce",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+63-10593,63,"Cooleman Court to Woden via Stirling & Fisher",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+63-10605,63,"Cooleman Court to Woden via Stirling & Fisher",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+64-10593,64,"Chapman to Woden via Rivett & Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+64-10605,64,"Chapman to Woden via Rivett & Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+65-10593,65,"Duffy to Woden via Holder & Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+65-10605,65,"Duffy to Woden via Holder & Cooleman Court",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+66-10593,66,"Cooleman Court to Woden via Denman Prospect",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+66-10605,66,"Cooleman Court to Woden via Denman Prospect",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+70-10593,70,"Tuggeranong to Woden via Kambah West & Cooleman Ct",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+70-10605,70,"Tuggeranong to Woden via Kambah West & Cooleman Ct",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+71-10593,71,"Tuggeranong to Woden via Kambah East & Cooleman Ct",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+71-10605,71,"Tuggeranong to Woden via Kambah East & Cooleman Ct",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+72-10593,72,"Tuggeranong to Woden via Oxley & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+72-10605,72,"Tuggeranong to Woden via Oxley & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+73-10593,73,"Tuggeranong to Woden via Monash & Wanniassa",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+73-10605,73,"Tuggeranong to Woden via Monash & Wanniassa",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+74-10593,74,"Chisholm Loop via Erindale & Richardson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+74-10605,74,"Chisholm Loop via Erindale & Richardson",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+75-10593,75,"Chisholm Loop via Richardson & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+75-10605,75,"Chisholm Loop via Richardson & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+76-10593,76,"Tuggeranong to Woden via Calwell & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+76-10605,76,"Tuggeranong to Woden via Calwell & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+77-10593,77,"Tuggeranong to Woden via Gowrie & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+77-10605,77,"Tuggeranong to Woden via Gowrie & Erindale",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+78-10593,78,"Richardson Loop via Chisholm",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+78-10605,78,"Richardson Loop via Chisholm",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+79-10593,79,"Calwell to Tuggeranong via Theodore",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+79-10605,79,"Calwell to Tuggeranong via Theodore",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+80-10593,80,"Lanyon Marketplace to Tuggeranong via Banks",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+80-10605,80,"Lanyon Marketplace to Tuggeranong via Banks",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+81-10593,81,"Lanyon Marketplace to Tuggeranong via Gordon",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+81-10605,81,"Lanyon Marketplace to Tuggeranong via Gordon",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+1001-10605,1001,"JPC Forde Bonnor Amaroo",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1002-10605,1002,"JPC Gungahlin",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1003-10605,1003,"JPC  Franklin Harrison Throsby",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1004-10605,1004,"JPC NEW Palmerston Crace",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1009-10605,1009,"Burgmann Valley Bonner AmarooMoncreff Ngun",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1010-10605,1010,"Burgmann Amaroo Bonner Forde",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1012-10605,1012,"Gold Cr HS PS Holy Spirit Gungahlin Ngunnawal",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1013-10605,1013,"Gold Crk HS PS Holy Spirit via Palmerston",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1015-10605,1015,"Harrison PS Mother Teresa",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1017-10605,1017,"Merici - Belconnen",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1018-10605,1018,"Dara Emmaus & Merici - Crace Giralang Kaleen",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1019-10605,1019,"Daramalan Emmaus & Merici -  Nicholls",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1020-10605,1020,"Dara Emmaus & Merici - Bonner Forde Throsby Harris",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1021-10605,1021,"Daramalan Emmaus & Merici Watson Hackett",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1022-10605,1022,"Daramalan Emmaus & Merici Casey Ngunnawal",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1027-10605,1027,"Brindabella Christian & Lyneham PS Throsby Harris",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1028-10605,1028,"Brinda Christian & Lyneham  Nicholls Crace",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1029-10605,1029,"Brindabella Christian & Lyneham PS",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1031-10605,1031,"Camp HS & PS & St Thomas More  Watson Downer",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1032-10605,1032,"Camp HS & PS & St Thomas More Hackett Ainsile",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1033-10605,1033,"Campbell HS to City NON STOP",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1035-10605,1035,"North Ainslie PS Dickson Watson",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1037-10605,1037,"St Francis Xavier  Nicholls Gung",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1038-10605,1038,"St Francis Xavier Macgregor Dunlop",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1039-10605,1039,"St Francis Xavier Charnwood Fraser West",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1040-10605,1040,"SFX Cook Macquarie Weetangera Hawker",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1041-10605,1041,"St Francis St John The Apostle Higgins",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1043-10605,1043,"St Francis Xavier Kingsford Dr Fraser East",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1044-10605,1044,"St Francis Xavier Evatt Mckellar Spence",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1045-10605,1045,"SFXC Melba HS Spence",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1046-10605,1046,"St Francis Xavier  Melba Evatt Mckellar",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1047-10605,1047,"Melba HS St Monicas Miles Franklin Fraser",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1048-10605,1048,"Melba HS St Monicas Miles Frank Charnwood & Dunlop",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1049-10605,1049,"Melba HS Miles Franklin St Monicas Spence Evatt",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1050-10605,1050,"Belconnen HS - Belconnen",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1051-10605,1051,"Belconnen HS  Hawker Scullin Florey",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1054-10605,1054,"Canberra HS - Belconnen",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1056-10605,1056,"Radford Kaleen Nicholls Gungahlin",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1060-10605,1060,"Kaleen HS Spence Evatt McKellar",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1062-10605,1062,"Charnwood/Dunlop PS & Fraser PS - Dunlop",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+1064-10605,1064,"Good Shepard & Amaroo PS Bonner & Forde",,712,0042AC,FFFFFF,
+1065-10605,1065,"Good Shepard & Amaroo PS Casey Ngunnawal",,712,0042AC,FFFFFF,
+1066-10605,1066,"Good Shepard & Amaroo PS Moncrieff",,712,0042AC,FFFFFF,
+1068-10605,1068,"Miles Franklin to Fraser via St Monicas & Melba HS",,712,0042AC,FFFFFF,
+1070-10605,1070,"Florey PS & Latham PS - Kippax Charmwood",,712,0042AC,FFFFFF,
+180-10605,180,"Lanyon Marketplace to City ANU via Banks & Conder",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+181-10605,181,"Lanyon Marketplace to City ANU via Banks & Gordon",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+182-10605,182,"Lanyon Marketplace to City ANU via Calwell",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+2001-10605,2001,"St Ed & St Clare's Kambah",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2002-10605,2002,"St Edmunds & St Clare's Bonython Erindale Fadden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2003-10605,2003,"St Eds & St Clare's Lanyon  Isabella Chisholm",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2004-10605,2004,"St Eds & St Clare's Theodore Calwell Chishlom",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2005-10605,2005,"St Edmunds & St Clare's Duffy Holder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2006-10605,2006,"St Eds & St Clare's Cooleman Fisher Rivett",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2007-10605,2007,"St Edmunds & St Clare's Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2008-10605,2008,"St Eds & St Clare's Tugg Wanniassa Erindale",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2009-10605,2009,"St Edmunds & St Clare's  Curtin Hughes Garran",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2010-10605,2010,"St Ed & St Clare's Mawson Isaacs Farrer Red H",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2011-10605,2011,"St Eds & St Clare's Torrens Pearce Lyons Wod",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2014-10605,2014,"Canberra Grammar Schools - Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2015-10605,2015,"Canberra Grammar Schools - City",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2016-10605,2016,"Canberra Grammar Schools - Hughes & Garran",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2017-10605,2017,"Canb Grammar Schools - Isaacs Farrer Mawson",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2018-10605,2018,"Canberra Grammar Schools Curtin Yarralumla",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2019-10605,2019,"Canberra Grammar Schools Kambah",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2020-10605,2020,"Red Hill PS Narrabundah Symonston",,712,0042AC,FFFFFF,
+2022-10605,2022,"Telopea & Forrest PS Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2023-10605,2023,"Telopea & Forrest PS Narrabundah Symonston",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2024-10605,2024,"Telopea & Forrest PS via Narrabundah",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2025-10605,2025,"Telopea & Forrest PS Woden via Deakin Curtin",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2026-10605,2026,"Telopea to City",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2029-10605,2029,"Alfred Deakin HS - Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2030-10605,2030,"Alfred Deakin HS Curtin Isaacs Farrer",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2031-10605,2031,"Alfred Deakin  Lyons Chifley Torrens Mawson",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2032-10605,2032,"Alfred Deakin HS Hughes Garran Phillip",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2035-10605,2035,"Marist College & Melrose HS -  Kambah",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2036-10605,2036,"Marist & Melrose HS -  Kambah",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2037-10605,2037,"Marist & Melrose HS - Deakin Yarra Curtin",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2039-10605,2039,"Marist College & Melrose HS - Chapman Rivett",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2040-10605,2040,"Marist College & Melrose HS - Duffy Holder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2041-10605,2041,"Marist & Melrose HS - Tuggeranong NON STOP",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2042-10605,2042,"Marist College - Lanyon Greenway",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2043-10605,2043,"Marist HS -Theodore Calwell & Erin",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2044-10605,2044,"Marist & Melrose HS Weston Lyons Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2045-10605,2045,"Marist & Melrose Hughes Garran Farrer Isaacs",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2046-10605,2046,"Marist College  Wright Stiring Fisher",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2047-10605,2047,"Marist via Hughes Garran",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2048-10605,2048,"Marist College -  Wanniassa Fadden Chisholm Isabel",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2049-10605,2049,"Melrose HS - Wanniassa Fadden Chisholm Isabella",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2053-10605,2053,"Mt Stromlo HS Holder Duffy Chapman",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2054-10605,2054,"Mt Stromlo HS Wright",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2056-10605,2056,"Montessori St Judes Orana & Islamic -Belco",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2057-10605,2057,"Montessori St Judes Orana & Islamic - Woden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2060-10605,2060,"St Mackillops W TrinityBanks Conder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2061-10605,2061,"St Mackillops Trinity Gordon Isabella Plains",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2062-10605,2062,"St Mary Mackx2 Trinity St Anthonys Kambah Nth",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2063-10605,2063,"St Mary Mackx2 Trinity St Anthonys Kambah Sth",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2064-10605,2064,"St Mary Mackillops Is Banks Conder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2065-10605,2065,"St Mary Mackillop Is Wanniassa Oxley",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2066-10605,2066,"St Mary Mack Wann Trinity- Theodore Calwell",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2067-10605,2067,"St Mary Mackillop Wann Trinity Bonython",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2068-10605,2068,"St Mackillop Wann Trinity-Richardson Chis Fad",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2069-10605,2069,"St Mary Mackillops Trinity Isabella Gowrie",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2070-10605,2070,"St Mackillops Trinity St Ant Isaacs Pearce",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2071-10605,2071,"St Mack 2 Trinity Gilmore Richardson Isab",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2072-10605,2072,"St Mackillops Trinity Duffy Holder Cooleman",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2073-10605,2073,"St Mackillops Trinity Rivett Chapman",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2074-10605,2074,"St Anth & Wanniassa Schs Monash Gowrie Fadden",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2075-10605,2075,"St Mackillops Trinity  via Stirling & Fisher",,712,0042AC,FFFFFF,
+2076-10605,2076,"St Mackillops Denman Coombs Wright",,712,0042AC,FFFFFF,
+2078-10605,2078,"Calwell HS PS St Francis via Conder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2079-10605,2079,"Calwell HS PS St Francis Theodore PS Conder",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+2081-10605,2081,"Caroline Chisholm Fadden Gilmore Richardson",,712,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/school_services
+901-10605,901,"Bruce Shuttle via UC Hospital & CIT Bruce",,3,0042AC,FFFFFF,
+902-10593,902,"Woden to Hume Loop via AMC",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+902-10605,902,"Woden to Hume Loop via AMC",,3,0042AC,FFFFFF,http://www.transport.act.gov.au/routes-and-timetables/timetables/
+903-10593,903,"Strathnairn Loop",,3,0042AC,FFFFFF,
+903-10605,903,"Strathnairn Loop",,3,0042AC,FFFFFF,

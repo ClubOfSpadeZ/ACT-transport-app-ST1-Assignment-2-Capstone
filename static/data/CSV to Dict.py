@@ -1,6 +1,6 @@
 # import csv
 #
-# with open('stops.txt') as csv_file:
+# with open('stops.csv') as csv_file:
 #     csv_reader = csv.DictReader(csv_file)
 #     with open('stopDict.txt', 'w') as txt_file:
 #         for row in csv_reader:

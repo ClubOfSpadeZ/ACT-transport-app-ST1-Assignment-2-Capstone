@@ -27,7 +27,11 @@ def getKEY():
 
 
 def timeCONVERT(time_str: str, date_str: str = None):
-    time_obj = datetime.datetime.strptime(time_str, '%I:%M%p').time()
+
+    if time_str is not ...:
+        time_obj = datetime.datetime.strptime(time_str, '%I:%M%p').time()
+    else:
+        return ...
 
     if date_str is None:
         today = datetime.datetime.today().date()
@@ -54,6 +58,15 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
     sample: smRequest(busStopID=2032, previewTime='', direction='A', debug=False)
     """
 
+    start = timeCONVERT(start)
+
+    xmlDict = \
+        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
+                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
+                                                      "StartTime": start, "PreviewInterval": f"PT{previewTime}",
+                                                      "MonitoringRef": busStopID, "DirectionRef": direction,
+                                                      "StopVisitTypes": stopType, "MaximumStopVisits": maxTrips,
+                                                      "MaximumTextLength": "4028"}}}
     if start is ...:
         xmlDict["ServiceRequest"]["StopMonitoringRequest"].pop("StartTime")
     if direction is ...:
@@ -63,15 +76,6 @@ def smRequest(busStopID: int, previewTime: str = '30M', start: str = ..., direct
     if maxTrips is ...:
         xmlDict["ServiceRequest"]["StopMonitoringRequest"].pop("MaximumStopVisits")
 
-    start = timeCONVERT(start)
-
-    xmlDict = \
-        {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
-                            "StopMonitoringRequest": {"-version": "2.0", "RequestTimestamp": timeNOW(),
-                                                      "StartTime": start, "PreviewInterval": f"PT{previewTime}",
-                                                      "MonitoringRef": busStopID, "DirectionRef": direction,
-                                                      "StopVisitTypes": stopType, "MaximumStopVisits": maxTrips,
-                                                      "MaximumTextLength": "1024"}}}
 
     if debug is True:
         print(xmlDict)
@@ -93,11 +97,11 @@ def ptRequest(start="2:30pm", end="3:30pm", date: Literal['today', '15/4/2023'] 
     sample: ptRequest(start="6:00am", end="6:15am", line=4, direction='B', debug=False)
     """
     if date == 'today':
-        start = timeCONVERT(start)
-        end = timeCONVERT(end)
+        start = timeCONVERT(str(start))
+        end = timeCONVERT(str(end))
     else:
-        start = timeCONVERT(start, date)
-        end = timeCONVERT(end, date)
+        start = timeCONVERT(str(start), date)
+        end = timeCONVERT(str(end), date)
 
     xmlDict = \
         {"ServiceRequest": {"RequestTimestamp": timeNOW(), "RequestorRef": getKEY(),
