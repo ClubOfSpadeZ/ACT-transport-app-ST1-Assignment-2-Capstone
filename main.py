@@ -12,7 +12,7 @@ Q1: How long does it take to travel from stop 1 to stop 2
 Q2: What is the fastest travel time for that route out of all options
 Q3: What is shortest wait time between each bus for that route at any time in the day
 Q4: What is the least amount of bus swaps requried to go from stop 1 to stop 2
-Q5: Draw chosen route 
+Q5: Draw chosen route - done 
 '''
 # OPTIONAL Q6: Display Bus GPS data on google maps
 # Predictive Analytics: predict the next next bus for a given route if the ideal one is missed
