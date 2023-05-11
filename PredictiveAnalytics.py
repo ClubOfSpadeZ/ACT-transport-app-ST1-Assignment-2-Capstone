@@ -1,8 +1,3 @@
-# read csv file
-# build a network with no duplicate edges going to and from the same 2 vertex (stop)
-# build new spanning tree
-# get times
-
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
