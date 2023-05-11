@@ -1,49 +1,77 @@
+# read csv file
+# build a network with no duplicate edges going to and from the same 2 vertex (stop)
+# build new spanning tree
+# get times
+
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 # Define the file path
 file_path = "static/data/stop_times.csv"
 
-# Load the file into a DataFrame
-stop_times_df = pd.read_csv(file_path)
+# Define the chunk size
+chunksize = 10000
 
 # Create a graph
-Graph = nx.MultiDiGraph()
+graph = nx.MultiDiGraph()
 
 # Add edges with weights based on time difference
-for i, row in stop_times_df.iterrows():
-    if i < len(stop_times_df) - 1:
-        current_stop_id = row['stop_id']
-        next_stop_id = stop_times_df.loc[i+1, 'stop_id']
-        current_time = pd.to_datetime(row['departure_time'])
-        # Get the departure time of the next stop
-        next_time = pd.to_datetime(stop_times_df.loc[i + 1, 'departure_time'])
+stop_times_df = pd.read_csv(file_path)
+trips_df = pd.read_csv('static/data/trips.csv')
+routes_df = pd.DataFrame({'route_id': []})
 
-        # Check if the hour is greater than 23
-        if next_time.hour > 23:
-            # If so, subtract 24 hours to wrap around to the next day
-            next_time -= pd.Timedelta(hours=24)
+i = 0
+flag = False
+for index, row in stop_times_df.iterrows():
+    if flag:
+        if row['stop_sequence'] == 1:
+            flag = False
+        continue
+    current_stop = row['stop_id']
+    if current_stop in graph:
+        graph.add_node(current_stop)
+    if row['stop_sequence'] == 1:
+        matching_trips = trips_df.loc[trips_df['trip_id'] == stop_times_df.loc[index, 'trip_id']]
+        # print(matching_trips)
+        if not matching_trips.empty:
+            matching_index = matching_trips.index[0]
+            # print(matching_index)
+            print(matching_trips['route_id'])
+            print(routes_df.loc[:, 'route_id'])
+            if routes_df.loc[:, 'route_id'] == matching_trips['route_id']:
+                flag = True
+                print('skip')
+            else:
+                routes_df = routes_df.add(matching_trips)
+        continue
+    else:
+        previous_stop = stop_times_df.loc[index - 1, 'stop_id']
+        try:
+            current_time = pd.to_datetime(row['arrival_time'])
+        except:
+            hour, minute, second = map(int, row['arrival_time'].split(':'))
+            hour0 = 0
+            current_time = pd.to_datetime(f"{hour0:02d}:{minute:02d}:{second:02d}")
+        try:
+            previous_time = pd.to_datetime(stop_times_df.loc[index - 1, 'arrival_time'])
+        except:
+            hour, minute, second = map(int, row['arrival_time'].split(':'))
+            hour0 = 0
+            previous_time = pd.to_datetime(f"{hour0:02d}:{minute:02d}:{second:02d}")
+        time_diff = (current_time - previous_time).total_seconds() // 60
+        graph.add_edge(previous_stop, current_stop, weight=time_diff)
+def graphNetwrok(StopFrom, StopTo, StartTime):
+    pass
+def outputVaules():
+    # Print the number of nodes and edges in the graph
+    print(f"Number of nodes: {graph.number_of_nodes()}")
+    print(f"Number of edges: {graph.number_of_edges()}")
 
-        # Calculate the time difference between the current and next stops
-        time_diff = next_time - current_time
-        Graph.add_edge(current_stop_id, next_stop_id, weight=time_diff)
+if __name__ == '__main__':
+    time_str = '00:39:00'
+    elapsed_seconds = (datetime.strptime(time_str, '%H:%M:%S').minute * 60) + (datetime.strptime(time_str, '%H:%M:%S').hour * 3600)
 
-# Print the number of nodes and edges in the graph
-print(f"Number of nodes: {Graph.number_of_nodes()}")
-print(f"Number of edges: {Graph.number_of_edges()}")
-
-# Find the shortest path from starting_stop_id to finishing_stop_id
-starting_stop_id = '1231'
-finishing_stop_id = '13'
-shortest_path = nx.shortest_path(Graph, starting_stop_id, finishing_stop_id, weight='weight', method="dijkstra")
-
-# Print the shortest path
-print(shortest_path)
-
-# Draw the graph
-pos = nx.spring_layout(Graph)
-nx.draw(Graph, pos, with_labels=True)
-edge_labels = nx.get_edge_attributes(Graph, 'weight')
-nx.draw_networkx_edge_labels(Graph, pos, edge_labels=edge_labels, font_size=8)
-plt.show()
+    print(elapsed_seconds)
+    outputVaules()
