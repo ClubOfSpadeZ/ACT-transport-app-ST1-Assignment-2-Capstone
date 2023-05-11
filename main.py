@@ -8,8 +8,8 @@
 # OPTIONAL NXTBUS real-time data API https://data.gov.au/dataset/ds-act-https%3A%2F%2Fwww.data.act.gov.au%2Fapi%2Fviews%2Fsmqx-37iq/details?q=action%20bus
 # to display the data we will used the google maps python libray and graphs to show travel and wait times
 '''
-Q1: How long does it take to travel from stop 1 to stop 2
-Q2: What is the fastest travel time for that route out of all options
+Q1: How long does it take to travel from stop 1 to stop 2 - done
+Q2: What is the fastest travel time for that route out of all options 
 Q3: What is shortest wait time between each bus for that route at any time in the day
 Q4: What is the least amount of bus swaps requried to go from stop 1 to stop 2
 Q5: Draw chosen route - done 
@@ -23,10 +23,90 @@ Q5: Draw chosen route - done
 #import xml.etree.ElementTree as et
 #import pandas
 #import googlemaps
+# import Q1
+# import Q2
+# import Q3
+# import Q4
 import Q5
+import tkinter
+import turtle
+# Create a Tkinter window
 
-coords = Q5.data(81)
-Q5.main(coords, "red", 2, 50, 4)
+import tkinter
+class myGUI:
+    def __init__(self):
+        self.main_window = tkinter.Tk()
+        self.main_window.title("BUS APP")
+
+        #create frames
+        self.input_frame = tkinter.Frame()
+        self.button_frame = tkinter.Frame()
+        self.result_frame = tkinter.Frame()
+
+        self.var = tkinter.StringVar(value="Q1")
+        self.canvas = tkinter.Canvas(self.main_window, width=400, height=400, bg="blue")
+        self.canvas.pack(side='left')
+        #create label and entry
+        self.question_label = tkinter.Label(self.input_frame, text = f"Select Question:")
+        option_1 = tkinter.Radiobutton(self.input_frame, text="Question 1", value="Q1", variable= self.var)
+        option_2 = tkinter.Radiobutton(self.input_frame, text="Question 2", value="Q2", variable= self.var)
+        option_3 = tkinter.Radiobutton(self.input_frame, text="Question 3", value="Q3", variable= self.var)
+        option_4 = tkinter.Radiobutton(self.input_frame, text="Question 4", value="Q4", variable= self.var)
+        option_5 = tkinter.Radiobutton(self.input_frame, text="Question 5", value="Q5", variable= self.var)
+        option_6 = tkinter.Radiobutton(self.input_frame, text="Question 6", value="Q6", variable= self.var)
+        
+        #create buttons
+        calculate_button = tkinter.Button(self.button_frame, text = "Calculate", command= self.calculate)
+        quit_button = tkinter.Button(self.button_frame, text = "Quit", command= self.main_window.destroy)
+
+        #create text box
+        self.results_tb = tkinter.Text(self.result_frame)
+
+        #pack labels, entry, buttons and text box
+        self.question_label.pack()
+        # Pack the radio buttons onto the window
+        option_1.pack()
+        option_2.pack()
+        option_3.pack()
+        option_4.pack()
+        option_5.pack()
+        option_6.pack()
+        calculate_button.pack(side='left')
+        quit_button.pack(side='left')
+        self.results_tb.pack()
+
+        #pack frames
+        self.input_frame.pack(side='left')
+        self.button_frame.pack(side='bottom')
+        self.result_frame.pack(side='right')
+        
+        
+        #Enter the tkinter main loop
+        tkinter.mainloop()
+
+        
+
+    #take user input and display the result
+    def calculate(self):
+        question = self.var.get()
+        if question == "Q5":
+            coords = Q5.data('81')
+            screen = turtle.TurtleScreen(self.canvas)
+            Q5.main(coords, "red", 2, 50, 4)
+        # elif question == "Q2":
+        #     Q2.main()
+        # # elif question == "Q3":
+        # #     Q3.main()
+        # # elif question == "Q4":
+        # #     Q4.main()
+        # elif question == "Q5":
+            #Q5.main(coords, "red", 2, 50, 4)
+        ...
+        print(self.var.get())
+        
+        
+my_gui = myGUI()
+#Q5.main(coords, "red", 2, 50, 4)
 
 key = 'AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE'
 

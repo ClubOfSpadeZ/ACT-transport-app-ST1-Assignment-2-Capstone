@@ -2,7 +2,7 @@ import turtle
 import csv
 
 def data(route):
-    with open('Bus_Routes.csv', 'r') as file:
+    with open('static\data\Bus_Routes.csv', 'r') as file:
 
         # Create a CSV reader object
         reader = csv.reader(file)
@@ -10,14 +10,14 @@ def data(route):
         # Skip the header row
         next(reader)
 
+        coords = ""
         # Iterate over each row in the CSV file
         for row in reader:
-            if row[4] == str(route):
+            if row[4] == route:
                 coords = row[0]
 
-    return coords
+        return coords
 
-#route: 19
 def remove_extras(coords : str):
     '''
     Removes the MULTILINESTRING ((...)) part and separates each entry by commas
