@@ -83,6 +83,7 @@ def draw_route(coordinates , colour, size):
     '''
     Draws the route using the coordinates from get_coordinate function
     '''
+    turtle.clear()
     turtle.color(colour)
     turtle.pensize(size)
     turtle.speed(0)
@@ -94,6 +95,7 @@ def draw_route(coordinates , colour, size):
         turtle.pendown()
         turtlepos.append(turtle.position())
         turtle.hideturtle()
+        turtle.update()
 
     return turtlepos
 
