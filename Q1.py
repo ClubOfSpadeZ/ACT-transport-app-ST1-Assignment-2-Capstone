@@ -1,7 +1,6 @@
 from tkinter import *
 import tkinter
 import tkinter.ttk as ttk
-import ttkthemes
 import matplotlib
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
@@ -16,7 +15,7 @@ class MyGUI():
     def __init__(self):
         # self.main_window = tkinter.Tk()
         self.canvas = None
-        self.main_window = ttkthemes.ThemedTk(theme="arc")
+        self.main_window = tkinter.Tk()
         self.main_window.geometry("800x650")
         self.main_window.title("Q1")
 
