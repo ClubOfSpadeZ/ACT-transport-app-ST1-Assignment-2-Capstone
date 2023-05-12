@@ -18,7 +18,7 @@ class MyGUI():
         self.canvas = None
         self.main_window = ttkthemes.ThemedTk(theme="arc")
         self.main_window.geometry("800x650")
-        self.main_window.title("Q1")
+        self.main_window.title("Q4")
 
         self.pickFrame = tkinter.Frame(self.main_window)
         self.pickFrame.pack(side='top')

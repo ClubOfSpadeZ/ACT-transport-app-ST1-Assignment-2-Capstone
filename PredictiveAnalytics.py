@@ -9,6 +9,13 @@ from typing_extensions import Literal
 # Define the file path
 file_path = "static/data/stop_times.csv"
 
+stop_times_df = pd.read_csv(file_path)
+trips_df = pd.read_csv('static/data/trips.csv')
+routes_df = pd.DataFrame({'route_id': []})
+matching_trips = pd.DataFrame()
+unique_route_ids = set(routes_df['route_id'].tolist())
+stops_df = pd.read_csv('static/data/stops.csv')
+
 def makeGraph():
     # Create a graph
     graph = nx.MultiDiGraph()
@@ -91,7 +98,7 @@ def graphNetwrok(StopFrom: str, StopTo: str, show: Literal['Path', 'Graph'] = 'G
         for u, v, data in graph.edges(data=True):
             data['weight'] += offset
 
-    path = nx.dijkstra_path(graph, starting_stop, destination_stop, weight='weight')
+    path = nx.dijkstra_path(graph, StopFrom, StopTo, weight='weight')
 
     print(path)
 
@@ -124,18 +131,10 @@ def graphNetwrok(StopFrom: str, StopTo: str, show: Literal['Path', 'Graph'] = 'G
             nx.draw(graph, pos, with_labels=True, node_color='lightblue', edge_color='gray', ax=ax)
             plt.show()
 
-if __name__ == '__main__':
-    stop_times_df = pd.read_csv(file_path)
-    trips_df = pd.read_csv('static/data/trips.csv')
-    routes_df = pd.DataFrame({'route_id': []})
-    matching_trips = pd.DataFrame()
-    unique_route_ids = set(routes_df['route_id'].tolist())
-    stops_df = pd.read_csv('static/data/stops.csv')
+def main(starting_stop, destination_stop):
 
     # Load graph from GraphML file
+    global graph
     graph = nx.read_graphml("my_graph.graphml")
 
-    starting_stop = '1231'
-    destination_stop = '4529'
-
-    graphNetwrok(starting_stop, destination_stop, show='Graph')
+    graphNetwrok(starting_stop, destination_stop, show='Path')

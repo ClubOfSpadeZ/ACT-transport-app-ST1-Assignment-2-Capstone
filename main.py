@@ -20,15 +20,25 @@ Q5: Draw chosen route - done
 # Input: XML data of Bus stops, Routes and Position, Output: Bus travel Routes
 
 #import busRequest
-#import xml.etree.ElementTree as et
-#import pandas
-#import googlemaps
-# import Q1
 import Q2
 # import Q3
 # import Q4
 import Q5
+import PredictiveAnalytics
 import tkinter
+import tkinter.ttk as ttk
+import ttkthemes
+import matplotlib
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
+from labellines import *
+from datetime import datetime
+import googlemaps
+import csv
+import pandas as pd
+import os
+import webbrowser
+from flask import Flask, render_template, url_for
 
 
 import tkinter
@@ -51,14 +61,14 @@ class myGUI:
         option_4 = tkinter.Radiobutton(self.input_frame, text="Question 4", value="Q4", variable= self.var, command=self.show_options)
         option_5 = tkinter.Radiobutton(self.input_frame, text="Question 5", value="Q5", variable= self.var, command=self.show_options)
         option_6 = tkinter.Radiobutton(self.input_frame, text="Question 6", value="Q6", variable= self.var, command=self.show_options)
-        
+
         #create buttons
         calculate_button = tkinter.Button(self.button_frame, text = "Calculate", command= self.calculate)
         quit_button = tkinter.Button(self.button_frame, text = "Quit", command= self.main_window.destroy)
 
 
         #pack labels, entry, buttons and text box
-        self.stop_result_label = tkinter.Label(self.result_frame, text=f"") 
+        self.stop_result_label = tkinter.Label(self.result_frame, text=f"")
         self.error_label = tkinter.Label(self.result_frame, text="Please enter a valid route")
         # Pack the radio buttons onto the window
         option_1.pack()
@@ -70,15 +80,20 @@ class myGUI:
         calculate_button.pack(side='left')
         quit_button.pack(side='left')
 
+        #Q1 and Q4
+        self.infoLabel1 = tkinter.Label(self.result_frame, text="Press Calculate and run file in new Python instance")
 
-        #Q2
-        self.stop_1_label = tkinter.Label(self.result_frame, text="Enter Stop 1 number")            
+        #Q3
+        self.infoLabel2 = tkinter.Label(self.result_frame, text="Press Calculate to open flask app and webpage to server")
+
+        #Q2 and Q6
+        self.stop_1_label = tkinter.Label(self.result_frame, text="Enter Stop 1 number")
         self.stop_1_entry = tkinter.Entry(self.result_frame)
-        self.stop_2_label = tkinter.Label(self.result_frame, text="Enter Stop 2 number")            
+        self.stop_2_label = tkinter.Label(self.result_frame, text="Enter Stop 2 number")
         self.stop_2_entry = tkinter.Entry(self.result_frame)
-        
+
         #Q5
-        self.route_label = tkinter.Label(self.result_frame, text="Enter route number")            
+        self.route_label = tkinter.Label(self.result_frame, text="Enter route number")
         self.route_entry = tkinter.Entry(self.result_frame)
         #pack frames
         self.input_frame.pack(side='left')
@@ -105,7 +120,7 @@ class myGUI:
                 self.error_label.pack()
             else:
                 self.error_label.pack_forget()
-      
+
         elif question == "Q2":
             stop_1 = str(self.stop_1_entry.get())
             stop_2 = str(self.stop_2_entry.get())
@@ -114,35 +129,56 @@ class myGUI:
             text = Q2.main(stop_1, stop_2, "AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE")
             self.stop_result_label.config(text=f"Stop 1: {stop_1_name} \n Stop 2: {stop_2_name} \n Fastest Time: {text}")
             self.stop_result_label.pack()
-        # # elif question == "Q3":
-        # #     Q3.main()
-        # # elif question == "Q4":
-        # #     Q4.main()
-        # elif question == "Q1":
-            #Q1.main()
-        # elif question == "Q6":
-            #Q6.main()
+        elif question == "Q3":
+            os.system('app.py')
+            webbrowser.open_new_tab('http://127.0.0.1:5000')
+        elif question == "Q4":
+            # exec(open('Q4.py').read(), None, None)
+            os.system('Q4.py')
+        elif question == "Q1":
+            # exec(open('Q1.py').read(), None, None)
+            os.system('Q1.py')
+        elif question == "Q6":
+            stop_1 = str(self.stop_1_entry.get())
+            stop_2 = str(self.stop_2_entry.get())
+            PredictiveAnalytics.main(stop_1, stop_2)
 
     
     def show_options(self):
+        self.route_label.pack_forget()
+        self.route_entry.pack_forget()
+        self.stop_1_label.pack_forget()
+        self.stop_1_entry.pack_forget()
+        self.stop_2_label.pack_forget()
+        self.stop_2_entry.pack_forget()
+        self.infoLabel1.pack_forget()
+        self.infoLabel2.pack_forget()
+
         if self.var.get() == "Q5":
             self.route_label.pack()
             self.route_entry.pack()
-        
-        
+
+        elif self.var.get() == "Q1":
+            self.infoLabel1.pack()
+
         elif self.var.get() == "Q2":
             self.stop_1_label.pack()
             self.stop_1_entry.pack()
             self.stop_2_label.pack()
             self.stop_2_entry.pack()
-        
-        else:
-            self.route_label.pack_forget()
-            self.route_entry.pack_forget()
-            self.stop_1_label.pack_forget()
-            self.stop_1_entry.pack_forget()
-            self.stop_2_label.pack_forget()
-            self.stop_2_entry.pack_forget()
+
+        elif self.var.get() == "Q3":
+            self.infoLabel1.pack()
+            self.infoLabel2.pack()
+
+        elif self.var.get() == "Q4":
+            self.infoLabel1.pack()
+
+        elif self.var.get() == "Q6":
+            self.stop_1_label.pack()
+            self.stop_1_entry.pack()
+            self.stop_2_label.pack()
+            self.stop_2_entry.pack()
 
         
 my_gui = myGUI()
