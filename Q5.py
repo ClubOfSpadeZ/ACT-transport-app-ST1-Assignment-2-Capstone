@@ -1,6 +1,7 @@
 import turtle
 import csv
 
+#get the route map data
 def data(route):
     with open('static\data\Bus_Routes.csv', 'r') as file:
 
