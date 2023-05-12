@@ -1,7 +1,7 @@
 import csv
 import requests
 
-
+#return the stop name based on the stop number
 def stop_name(stop_id):
     with open('static\data\stops.csv', 'r') as file:
 
@@ -31,13 +31,18 @@ def main(stop_1 : str, stop_2 : str, key:str):
         "key": key
     }
 
+    #ask for the parameters from the api
     response = requests.get(endpoint, params=params)
 
+    #store the response
     data = response.json()
 
+    #error handling, if data is invalid
     if data["status"] != "OK":
-        print("Error:", data["status"])
+        fastest_time = data["status"]
+        return fastest_time
     else:
+        #if there is data, get its optimised duration
         if len(data["routes"]) > 0:
             fastest_time = data["routes"][0]["legs"][0]["duration"]["text"]
             return fastest_time
