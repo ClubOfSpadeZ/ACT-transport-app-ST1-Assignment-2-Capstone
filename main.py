@@ -9,9 +9,9 @@
 # to display the data we will used the google maps python libray and graphs to show travel and wait times
 '''
 Q1: How long does it take to travel from stop 1 to stop 2 - done
-Q2: What is the fastest travel time for that route out of all options 
-Q3: What is shortest wait time between each bus for that route at any time in the day
-Q4: What is the least amount of bus swaps requried to go from stop 1 to stop 2
+Q2: What is the fastest travel time for that route out of all options - done
+Q3: display every stop on a map - done
+Q4: What is the least amount of bus swaps requried to go from stop 1 to stop 2 - done
 Q5: Draw chosen route - done 
 '''
 # OPTIONAL Q6: Display Bus GPS data on google maps
