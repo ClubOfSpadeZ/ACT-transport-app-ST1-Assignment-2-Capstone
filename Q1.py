@@ -4,7 +4,6 @@ import tkinter.ttk as ttk
 import matplotlib
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-from labellines import *
 from datetime import datetime
 import googlemaps
 import csv
