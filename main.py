@@ -26,18 +26,12 @@ import Q2
 import Q5
 import PredictiveAnalytics
 import tkinter
-import tkinter.ttk as ttk
-import matplotlib
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-from labellines import *
 from datetime import datetime
-import googlemaps
-import csv
 import pandas as pd
 import os
 import webbrowser
-from flask import Flask, render_template, url_for
 
 
 import tkinter
@@ -62,7 +56,7 @@ class myGUI:
         option_6 = tkinter.Radiobutton(self.input_frame, text="Question 6", value="Q6", variable= self.var, command=self.show_options)
 
         #create buttons
-        calculate_button = tkinter.Button(self.button_frame, text = "Calculate", command= self.calculate)
+        calculate_button = tkinter.Button(self.button_frame, text = "Submit", command= self.calculate)
         quit_button = tkinter.Button(self.button_frame, text = "Quit", command= self.main_window.destroy)
 
 
@@ -127,7 +121,7 @@ class myGUI:
             stop_2_name = Q2.stop_name(str(self.stop_2_entry.get()))
             text = Q2.main(stop_1, stop_2, "AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE")
             self.stop_result_label.config(text=f"Stop 1: {stop_1_name} \n Stop 2: {stop_2_name} \n Fastest Time: {text}")
-            self.stop_result_label.pack()
+            
         elif question == "Q3":
             os.system('app.py')
             webbrowser.open_new_tab('http://127.0.0.1:5000')
@@ -150,6 +144,7 @@ class myGUI:
         self.stop_1_entry.pack_forget()
         self.stop_2_label.pack_forget()
         self.stop_2_entry.pack_forget()
+        self.stop_result_label.pack_forget()
         self.infoLabel1.pack_forget()
         self.infoLabel2.pack_forget()
 
@@ -165,6 +160,7 @@ class myGUI:
             self.stop_1_entry.pack()
             self.stop_2_label.pack()
             self.stop_2_entry.pack()
+            self.stop_result_label.pack()
 
         elif self.var.get() == "Q3":
             self.infoLabel1.pack()
