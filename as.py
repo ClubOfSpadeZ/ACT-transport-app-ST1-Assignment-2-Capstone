@@ -1,26 +1,23 @@
-import requests
+import tkinter as tk
 
-# Set the API endpoint and parameters
-endpoint = "https://maps.googleapis.com/maps/api/directions/json"
-params = {
-    "origin": "Canberra",
-    "destination": "Barton",
-    "mode": "transit",
-    "transit_mode": "bus",
-    "key": "AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE"
-}
+def hide_text():
+    text.pack_forget()
 
-# Send a request to the API endpoint with the specified parameters
-response = requests.get(endpoint, params=params)
+def show_text():
+    text.pack()
 
-# Parse the JSON response
-data = response.json()
+# Create a window and a button
+window = tk.Tk()
+button_hide = tk.Button(window, text="Hide Text", command=hide_text)
+button_show = tk.Button(window, text="Show Text", command=show_text)
 
-# Extract the bus route and time data
-legs = data["routes"][0]["legs"][0]
-route = legs["arrival_time"]["text"]
-time = legs["duration"]["text"]
+# Create a text widget
+text = tk.Label(window, text="This is some text.")
 
-# Print the extracted data
-print("Bus route:", route)
-print("Bus travel time:", time)
+# Pack the widgets onto the window
+text.pack()
+button_hide.pack()
+button_show.pack()
+
+# Run the window
+window.mainloop()

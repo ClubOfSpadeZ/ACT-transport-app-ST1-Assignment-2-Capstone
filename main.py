@@ -24,7 +24,7 @@ Q5: Draw chosen route - done
 #import pandas
 #import googlemaps
 # import Q1
-# import Q2
+import Q2
 # import Q3
 # import Q4
 import Q5
@@ -58,8 +58,8 @@ class myGUI:
 
 
         #pack labels, entry, buttons and text box
+        self.stop_result_label = tkinter.Label(self.result_frame, text=f"") 
         self.error_label = tkinter.Label(self.result_frame, text="Please enter a valid route")
-        self.question_label.pack()
         # Pack the radio buttons onto the window
         option_1.pack()
         option_2.pack()
@@ -71,6 +71,15 @@ class myGUI:
         quit_button.pack(side='left')
 
 
+        #Q2
+        self.stop_1_label = tkinter.Label(self.result_frame, text="Enter Stop 1 number")            
+        self.stop_1_entry = tkinter.Entry(self.result_frame)
+        self.stop_2_label = tkinter.Label(self.result_frame, text="Enter Stop 2 number")            
+        self.stop_2_entry = tkinter.Entry(self.result_frame)
+        
+        #Q5
+        self.route_label = tkinter.Label(self.result_frame, text="Enter route number")            
+        self.route_entry = tkinter.Entry(self.result_frame)
         #pack frames
         self.input_frame.pack(side='left')
         self.button_frame.pack(side='bottom')
@@ -85,7 +94,6 @@ class myGUI:
     #take user input and display the result
     def calculate(self):
         question = self.var.get()
-        self.error_label.pack_forget()
         if question == "Q5":
             try:
                 route = str(self.route_entry.get())
@@ -95,9 +103,17 @@ class myGUI:
                     Q5.main(coords, "red", 2, 50, 4)
             except ValueError:   
                 self.error_label.pack()
+            else:
+                self.error_label.pack_forget()
       
-        # elif question == "Q2":
-        #     Q2.main()
+        elif question == "Q2":
+            stop_1 = str(self.stop_1_entry.get())
+            stop_2 = str(self.stop_2_entry.get())
+            stop_1_name = Q2.stop_name(str(self.stop_1_entry.get()))
+            stop_2_name = Q2.stop_name(str(self.stop_2_entry.get()))
+            text = Q2.main(stop_1, stop_2, "AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE")
+            self.stop_result_label.config(text=f"Stop 1: {stop_1_name} \n Stop 2: {stop_2_name} \n Fastest Time: {text}")
+            self.stop_result_label.pack()
         # # elif question == "Q3":
         # #     Q3.main()
         # # elif question == "Q4":
@@ -106,22 +122,30 @@ class myGUI:
             #Q1.main()
         # elif question == "Q6":
             #Q6.main()
-        ...
 
     
     def show_options(self):
         if self.var.get() == "Q5":
-            self.route_label = tkinter.Label(self.result_frame, text="Enter route number")            
-            self.route_entry = tkinter.Entry(self.result_frame)
             self.route_label.pack()
             self.route_entry.pack()
+        
+        
+        elif self.var.get() == "Q2":
+            self.stop_1_label.pack()
+            self.stop_1_entry.pack()
+            self.stop_2_label.pack()
+            self.stop_2_entry.pack()
+        
         else:
             self.route_label.pack_forget()
             self.route_entry.pack_forget()
-        
+            self.stop_1_label.pack_forget()
+            self.stop_1_entry.pack_forget()
+            self.stop_2_label.pack_forget()
+            self.stop_2_entry.pack_forget()
+
         
 my_gui = myGUI()
-#Q5.main(coords, "red", 2, 50, 4)
 
 key = 'AIzaSyAzmIkaPnXXghoAImiCqL1wlYW5shytqKE'
 
